@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color: grey;
+        }
+        button:focus {
+            background-color: grey !important;
+            color: black !important;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="inner-container" style="background-color: white; margin-left:auto; margin-right: auto;">
+        <div class="row">
+            <!-- logo-->
+            <div class="col">
+                    <img src="img/logo.gif" alt="logo" style="width: 20%;">
+            </div>
+            <div class="social" style="padding-top: 20px; padding-right: 20px;">
+                    Call us on: 07624 431271
+                    <br>
+                    emaill: performance@spsiom.com
+                    <!--Facebook logo-->
+                    <div class="row">
+                        <a href="#"><i class="fa fa-facebook-official" aria-hidden="true" style="color: #3b5998; float:right; font-size: 30px;"></i></a>
+                    </div>
+                    <!--button-->
+                    <div class="row" style="padding-top: 5px;;">
+                        <div class="col">
+                            <a href="index.html"><button style="background-color: #0e4693; padding: 8px; margin-right: 0px; color: white;">Home</button></a>
+                            <a href="aboutus.html"><button style="background-color: #0e4693; padding: 8px; margin-left: 0.1px; color: white; margin-right: 0px;;">About Us</button></a>
+                            <a href="contactus.html"><button style="background-color: #0e4693; padding: 8px; margin-left: 0.1px; color: white;">Contact Us</button></a>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+    </div>
+    <!--Location of Map-->
+    <div class="inner-container"  style="background-color: white; margin-top: 10px;">
+        <div id="map" style="height: 1000px;;"></div>
+    </div>
+    <div class="inner-container"  style="background-color: white;">
+        <div class="row">
+            <div class="col" style="padding-right: 5px; padding-bottom: 20px;">
+                <img src="img/thumb-3.jpg" alt="office">
+            </div>
+            <div class="col" style="padding-right: 5px; padding-bottom: 20px;">
+                <img src="img/thumb-4.jpg" alt="centre">
+            </div>
+            <div class="col" style="padding-bottom: 20px;">
+                <img src="img/thumb-6.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="inner-container" style="height: 20px; background-color: #0e4693; margin-left:auto; margin-right: auto;">
+        
+    </div>
+    
+    <script>
+        function initMap(){
+            const location = {lat: 53.480759, lng: -2.242631};
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                center: location
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHTuKLT_tsQmSBrupd0lthKVxRHMO3_Ek&callback=initMap">
+    </script>
+</body>
+</html>
